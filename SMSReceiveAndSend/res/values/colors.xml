@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="crna">#000000</color>
+    <color name="bela">#FFFFFF</color>
+    <color name="tamnoPlava">#31838E</color>
+    <color name="svetloPlava">#D0E5EA</color>
+    <color name="tamnoSiva">#A7A9AC</color>
+    <color name="crvenkasta">#FE3A50</color>
+    <color name="crnomanjasta">#43423E</color>
+    <color name="svetloSivkasta">#D1D3D4</color>
+    <color name="bojaApsolventskih"> #49B4BE</color>
+    
+</resources>
