@@ -7,12 +7,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@drawable/black"
     tools:context=".MainActivity" >
-
- 
     <ListView
         android:id="@+id/listViewPregledSMS"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+  		android:dividerHeight="6dp"   
+  		android:choiceMode="singleChoice"    
+  		android:drawSelectorOnTop="true"  
+       />
 
 </LinearLayout>

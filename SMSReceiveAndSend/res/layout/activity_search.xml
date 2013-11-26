@@ -7,14 +7,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:weightSum="4"
+    android:background="@drawable/black"
     android:orientation="vertical"
     tools:context=".NewSMSActivity" >
 	
     <LinearLayout
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_gravity="center"
-	    android:gravity="center"
+	    android:layout_gravity="center_vertical|left"
 	    android:padding="10dp" 
 	    android:layout_weight="1"
 	    android:orientation="horizontal"
@@ -24,25 +24,26 @@
 	        android:id="@+id/labelSender"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
-	        android:layout_weight="1"
-	        android:textColor="@color/crvenkasta"/>
+	        android:layout_gravity="center_vertical|left"
+	        android:layout_weight="1"	        android:text="@string/labelSender"
+	        android:textColor="@color/bela"
+	        android:textStyle="bold"/>
 	
 	    <EditText
 	        android:id="@+id/txtNumber"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
+	        android:layout_gravity="center_vertical|right"
 	        android:ems="10"
 	        android:singleLine="true" 
+	        android:background="@drawable/edit_text_border"
 	        android:layout_weight="1">
 	    </EditText>
 	</LinearLayout>
     <LinearLayout
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_gravity="center"
-	    android:gravity="center"
+	    android:layout_gravity="center_vertical|left"
 	    android:padding="10dp" 
 	    android:layout_weight="1"
 	    android:orientation="horizontal"
@@ -52,42 +53,53 @@
 	        android:id="@+id/labelDate"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
+	        android:layout_gravity="center_vertical|left"
 	        android:layout_weight="1"
-	        android:textColor="@color/crvenkasta"/>
-	
+	        android:text="@string/labelDate"
+	        android:textColor="@color/bela"
+	        android:textStyle="bold"/>
 	    <EditText
 	        android:id="@+id/txtDate"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
+	        android:layout_gravity="center_vertical|right"
 	        android:ems="10"
 	        android:singleLine="true" 
+	      	android:background="@drawable/edit_text_border"
 	        android:layout_weight="1">
 	    </EditText>
 	</LinearLayout>
 	<LinearLayout
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:layout_gravity="center"
-	    android:gravity="center"
+	    android:layout_gravity="center_vertical|left"
 	    android:padding="10dp" 
 	    android:layout_weight="1"
-	    android:orientation="horizontal">
-	
+	    android:orientation="horizontal"
+	    android:weightSum="2">
+		<TextView
+	        android:id="@+id/labelMessage"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical|left"
+	        android:text="@string/labelMessage"
+	        android:textColor="@color/bela"
+	        android:layout_weight="1"
+	        android:textStyle="bold"/>
 	    <EditText
 	        android:id="@+id/txtMessage"
 	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_gravity="center"
+	        android:layout_height="fill_parent"
+	        android:layout_gravity="center_vertical|right"
+	       	android:background="@drawable/edit_text_border"
+	  	    android:layout_weight="1"
 	        android:ems="10">
 	    </EditText>
 	</LinearLayout>
 	<LinearLayout
-	    android:layout_width="wrap_content"
+	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="center"
-	    android:gravity="center"
 	    android:padding="10dp" 
 	    android:layout_weight="1"
 	    android:orientation="horizontal"
@@ -98,9 +110,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
-            android:background="@color/bojaApsolventskih"
+            android:background="@drawable/button_shape"
             android:text="@string/respond"
-            android:textColor="@color/svetloPlava"
+        	android:layout_marginRight="5dp"
+            android:textColor="@color/crna"
             android:textSize="@dimen/text_size_med"
             android:layout_weight="1"/>
         <Button
@@ -108,10 +121,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
-            android:background="@color/bojaApsolventskih"
+            android:background="@drawable/button_shape"
+            android:layout_marginRight="5dp"
             android:onClick="decline"
             android:text="@string/decline"
-            android:textColor="@color/crvenkasta"
+            android:textColor="@color/crna"
             android:textSize="@dimen/text_size_med"
             android:layout_weight="1"/>
        <Button
@@ -119,10 +133,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center"
-            android:background="@color/bojaApsolventskih"
+            android:background="@drawable/button_shape"
+            android:layout_marginRight="5dp"
             android:onClick="respondLater"
             android:text="@string/respond_later"
-            android:textColor="@color/svetloSivkasta"
+            android:textColor="@color/crna"
             android:textSize="@dimen/text_size_med"
             android:layout_weight="1"/>
 	</LinearLayout>

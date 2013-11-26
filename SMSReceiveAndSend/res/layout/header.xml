@@ -15,8 +15,8 @@
         android:gravity="center|center_horizontal"
         android:padding="10dp"
         android:text="@string/labelSender"
-        android:textColor="#000"
-        android:textSize="@dimen/text_size_med"
+        android:textColor="@color/bela"
+        android:textSize="@dimen/text_size_big"
         android:textStyle="bold" />
 
     <TextView
@@ -29,8 +29,8 @@
         android:gravity="center|center_horizontal"
         android:padding="10dp"
         android:text="@string/labelDate"
-        android:textColor="#000"
-        android:textSize="@dimen/text_size_med"
+        android:textColor="@color/bela"
+        android:textSize="@dimen/text_size_big"
         android:textStyle="bold" />
 
 

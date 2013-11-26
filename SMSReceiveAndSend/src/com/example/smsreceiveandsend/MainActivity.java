@@ -35,6 +35,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		SMSListAdapter adapter = new SMSListAdapter(MainActivity.this, R.layout.activity_main_item, stavke);
 		smsHolder.getListView1().setAdapter(adapter);
 		smsHolder.getListView1().setOnItemClickListener(MainActivity.this);
+		smsHolder.getListView1().setSelector( R.drawable.list_selector);
 	}
 
 	@Override
@@ -54,9 +55,11 @@ public class MainActivity extends Activity implements OnItemClickListener{
 			return listViewPregledSMS;
 		}
 	}
-
+	
 	@Override
 	public void onItemClick(AdapterView<?> a, View arg1, int position, long arg3) {
+	  
+	  
 		SMSModel sms = (SMSModel) a.getItemAtPosition(position);
 		if(sms!=null){
 			Intent i = new Intent(this, NewSMSActivity.class);

@@ -30,23 +30,31 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int text_size_big=0x7f050003;
         public static final int text_size_med=0x7f050002;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int black=0x7f020000;
+        public static final int button_shape=0x7f020001;
+        public static final int edit_text_border=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int list_item_selected=0x7f020004;
+        public static final int list_item_shape=0x7f020005;
+        public static final int list_selector=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000b;
-        public static final int btnDecline=0x7f090009;
-        public static final int btnRespond=0x7f090008;
-        public static final int btnRespondLater=0x7f09000a;
+        public static final int action_settings=0x7f09000c;
+        public static final int btnDecline=0x7f09000a;
+        public static final int btnRespond=0x7f090009;
+        public static final int btnRespondLater=0x7f09000b;
         public static final int date=0x7f090002;
         public static final int labelDate=0x7f090005;
+        public static final int labelMessage=0x7f090007;
         public static final int labelSender=0x7f090003;
         public static final int listViewPregledSMS=0x7f090000;
         public static final int sender=0x7f090001;
         public static final int txtDate=0x7f090006;
-        public static final int txtMessage=0x7f090007;
+        public static final int txtMessage=0x7f090008;
         public static final int txtNumber=0x7f090004;
     }
     public static final class layout {
@@ -63,13 +71,13 @@ public final class R {
         public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060000;
         public static final int decline=0x7f060008;
-        public static final int hello_world=0x7f060003;
-        public static final int labelDate=0x7f060006;
-        public static final int labelSender=0x7f060005;
+        public static final int labelDate=0x7f060005;
+        public static final int labelMessage=0x7f060006;
+        public static final int labelSender=0x7f060004;
         public static final int respond=0x7f060007;
         public static final int respond_later=0x7f060009;
         public static final int title_activity_main=0x7f060001;
-        public static final int title_activity_search=0x7f060004;
+        public static final int title_activity_search=0x7f060003;
     }
     public static final class style {
         /** 
