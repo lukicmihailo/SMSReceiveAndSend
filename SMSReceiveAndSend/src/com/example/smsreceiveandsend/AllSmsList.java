@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -44,7 +45,27 @@ public class AllSmsList extends Activity implements OnItemClickListener{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()) {
+	    case R.id.action_prikazi_neodgovorene:
+	    	 Intent intent = new Intent(this, FilterListActivity.class);
+	    	 intent.putExtra("lista", "neodgovorene");
+		     this.startActivity(intent);
+	        break;
+	    case R.id.action_prikazi_odgovorene:
+	    	 Intent intent1 = new Intent(this, FilterListActivity.class);
+	    	 intent1.putExtra("lista", "odgovorene");
+		     this.startActivity(intent1);
+	        break;
+	    case R.id.action_prikazi_sve:
+	    	 Intent intent2 = new Intent(this, AllSmsList.class);
+	    	 intent2.putExtra("lista", "odgovorene");
+		     this.startActivity(intent2);
+	        break;
+	    }
+	    return true;
+	}
 	public class SMSListViewHolder
 	{
 		private ListView listViewPregledSMS;
@@ -58,24 +79,20 @@ public class AllSmsList extends Activity implements OnItemClickListener{
 	
 	@Override
 	public void onItemClick(AdapterView<?> a, View arg1, int position, long arg3) {
-	  
-	  
 		SMSModel sms = (SMSModel) a.getItemAtPosition(position);
 		if(sms!=null){
 			Intent i = new Intent(this, NewSMSActivity.class);
 			i.putExtra("date", sms.getDate());
 			i.putExtra("senderNumber", sms.getSenderNumber());
 			i.putExtra("message", sms.getMessage());
+			i.putExtra("_id", sms.getId());
 			startActivity(i);		
 		}
-		
 	}
 	
 	public ArrayList<SMSModel> fetchInboxSms() {
 	  ArrayList<SMSModel> smsInbox = new ArrayList<SMSModel>();
-	
 	  Uri uriSms = Uri.parse("content://sms/inbox");
-	
 	  Cursor cursor = this.getContentResolver()
 	          .query(uriSms, new String[] { "_id", "address", "person", "date", "body",
 	                          "type", "read" }, "type="+1, null,
@@ -106,7 +123,7 @@ public class AllSmsList extends Activity implements OnItemClickListener{
 
 	private boolean validateMessage(String message) {
 		boolean ok = false;
-		ok=message.contains("misa");
+		ok=message.contains("misa")&&!message.contains("Replyed") ;
 		return ok;
 	}
 	

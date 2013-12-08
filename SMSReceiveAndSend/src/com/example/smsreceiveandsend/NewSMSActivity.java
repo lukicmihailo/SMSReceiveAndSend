@@ -1,6 +1,8 @@
 package com.example.smsreceiveandsend;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.view.Menu;
@@ -11,14 +13,17 @@ import android.widget.EditText;
 
 public class NewSMSActivity extends Activity {
 	private String senderNumber = "";
+	private String id = "";
+	private String message = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_search);
 		String number = getIntent().getStringExtra("senderNumber").toString();
 		senderNumber = number;
+		id =  getIntent().getStringExtra("_id");
 		String date = getIntent().getStringExtra("date").toString();
-		String message = getIntent().getStringExtra("message").toString();
+		message = getIntent().getStringExtra("message").toString();
 		SMSActivityHolder activityHolder = new SMSActivityHolder();
 		activityHolder.getTxtNumber().setText(number);
 		activityHolder.getTxtDate().setText(date);
@@ -55,6 +60,12 @@ public class NewSMSActivity extends Activity {
 	public void respond(){
 	       SmsManager sms = SmsManager.getDefault();
 	       sms.sendTextMessage(senderNumber, null, "test", null, null);
+	       
+	       Uri uriSms = Uri.parse("content://sms/inbox");
+	       String strFilter = "_id=" + id;
+	       ContentValues args = new ContentValues();
+	       args.put("body", message +" Replyed");
+	       getContentResolver().update(uriSms, args, strFilter, null);
 	}
 	
 	public void decline(){
@@ -101,3 +112,4 @@ public class NewSMSActivity extends Activity {
 		}
 	}
 }
+

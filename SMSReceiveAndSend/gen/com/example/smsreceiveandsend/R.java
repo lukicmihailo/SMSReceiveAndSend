@@ -43,6 +43,9 @@ public final class R {
         public static final int list_selector=0x7f020006;
     }
     public static final class id {
+        public static final int action_prikazi_neodgovorene=0x7f09000d;
+        public static final int action_prikazi_odgovorene=0x7f09000e;
+        public static final int action_prikazi_sve=0x7f09000f;
         public static final int action_settings=0x7f09000c;
         public static final int btnDecline=0x7f09000a;
         public static final int btnRespond=0x7f090009;
@@ -70,18 +73,24 @@ public final class R {
         public static final int search=0x7f080002;
     }
     public static final class string {
-        public static final int action_settings=0x7f060002;
+        public static final int action_neodgovorene=0x7f060003;
+        public static final int action_odgovorene=0x7f060002;
+        public static final int action_settings=0x7f06000e;
+        public static final int action_sve=0x7f060004;
         public static final int app_name=0x7f060000;
-        public static final int decline=0x7f060008;
-        public static final int hello_world=0x7f06000b;
-        public static final int labelDate=0x7f060005;
-        public static final int labelMessage=0x7f060006;
-        public static final int labelSender=0x7f060004;
-        public static final int respond=0x7f060007;
-        public static final int respond_later=0x7f060009;
-        public static final int title_activity_filter_list=0x7f06000a;
+        public static final int decline=0x7f06000a;
+        public static final int hello_world=0x7f06000d;
+        public static final int labelDate=0x7f060007;
+        public static final int labelMessage=0x7f060008;
+        public static final int labelSender=0x7f060006;
+        public static final int prikazi_neodgovorene=0x7f06000f;
+        public static final int prikazi_odgovorene=0x7f060010;
+        public static final int prikazi_sve=0x7f060011;
+        public static final int respond=0x7f060009;
+        public static final int respond_later=0x7f06000b;
+        public static final int title_activity_filter_list=0x7f06000c;
         public static final int title_activity_main=0x7f060001;
-        public static final int title_activity_search=0x7f060003;
+        public static final int title_activity_search=0x7f060005;
     }
     public static final class style {
         /** 
