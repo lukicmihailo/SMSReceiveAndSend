@@ -20,7 +20,7 @@
         </receiver>
 
         <activity
-            android:name="com.example.smsreceiveandsend.MainActivity"
+            android:name="com.example.smsreceiveandsend.AllSmsList"
             android:label="@string/title_activity_main" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,9 +32,12 @@
             android:name="com.example.smsreceiveandsend.NewSMSActivity"
             android:label="@string/title_activity_search" >
         </activity>
-        
+        <activity
+            android:name="com.example.smsreceiveandsend.FilterListActivity"
+            android:label="@string/title_activity_filter_list" >
+        </activity>
     </application>
-    
+
     <uses-permission android:name="android.permission.RECEIVE_SMS" >
     </uses-permission>
     <uses-permission android:name="android.permission.READ_SMS" >

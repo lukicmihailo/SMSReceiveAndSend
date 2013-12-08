@@ -11,4 +11,7 @@
     <string name="respond">Respond</string>
     <string name="decline">Decline</string>
     <string name="respond_later">Respond later</string>
+    <string name="title_activity_filter_list">FilterListActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

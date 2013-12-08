@@ -17,7 +17,7 @@ import android.widget.ListView;
 import com.adapters.SMSListAdapter;
 import com.models.SMSModel;
 
-public class MainActivity extends Activity implements OnItemClickListener{
+public class AllSmsList extends Activity implements OnItemClickListener{
 
 	public static SMSListViewHolder smsHolder;
 	@Override
@@ -32,9 +32,9 @@ public class MainActivity extends Activity implements OnItemClickListener{
 		stavke = fetchInboxSms();
 //		SMSModel sms = new SMSModel("0642736408", "21.01.2003", "Dobar dan");
 //		stavke.add(sms);
-		SMSListAdapter adapter = new SMSListAdapter(MainActivity.this, R.layout.activity_main_item, stavke);
+		SMSListAdapter adapter = new SMSListAdapter(AllSmsList.this, R.layout.activity_main_item, stavke);
 		smsHolder.getListView1().setAdapter(adapter);
-		smsHolder.getListView1().setOnItemClickListener(MainActivity.this);
+		smsHolder.getListView1().setOnItemClickListener(AllSmsList.this);
 		smsHolder.getListView1().setSelector( R.drawable.list_selector);
 	}
 
@@ -49,7 +49,7 @@ public class MainActivity extends Activity implements OnItemClickListener{
 	{
 		private ListView listViewPregledSMS;
 		public SMSListViewHolder() {
-			this.listViewPregledSMS = (ListView)MainActivity.this.findViewById(R.id.listViewPregledSMS);
+			this.listViewPregledSMS = (ListView)AllSmsList.this.findViewById(R.id.listViewPregledSMS);
 		}
 		public ListView getListView1() {
 			return listViewPregledSMS;
