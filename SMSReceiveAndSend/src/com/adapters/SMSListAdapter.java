@@ -6,10 +6,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.smsreceiveandsend.R;
@@ -57,6 +56,7 @@ public class SMSListAdapter extends ArrayAdapter<SMSModel> {
 			holder = new PregledSMSHolder();
 			holder.sender = (TextView) row.findViewById(R.id.sender);
 			holder.date = (TextView) row.findViewById(R.id.date);
+			holder.image = (ImageView) row.findViewById(R.id.imageRemove);
 			row.setTag(holder);
 		} 
 		else {
@@ -65,6 +65,7 @@ public class SMSListAdapter extends ArrayAdapter<SMSModel> {
 		SMSModel smsModel = (SMSModel) data.get(position);
 		holder.sender.setText(smsModel.getSenderNumber());
 		holder.date.setText(smsModel.getDate());
+		holder.image.setTag(smsModel);
 		return row;
 	}
 
@@ -72,5 +73,6 @@ public class SMSListAdapter extends ArrayAdapter<SMSModel> {
 	static class PregledSMSHolder {
 		TextView sender;
 		TextView date;
+		ImageView image;
 	}
 }

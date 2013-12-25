@@ -2,23 +2,23 @@
 <resources>
 
     <string name="app_name">SMSReceiveAndSend</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_odgovorene">Prikazi odgovorene SMS-ove</string>
-    <string name="action_neodgovorene">Prikazi n SMS-ove</string>
-    <string name="action_sve">Prikazi sve SMS-ove</string>
-    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_main">SMS list</string>
+    <string name="action_odgovorene">Show responded SMS</string>
+    <string name="action_neodgovorene">Show unresponded SMS</string>
+    <string name="action_sve">Show all SMS</string>
+    <string name="title_activity_search">SMS data</string>
     <string name="labelSender">Sender:</string>
     <string name="labelDate">Date:</string>
     <string name="labelMessage">Message:</string>
     <string name="respond">Respond</string>
     <string name="decline">Decline</string>
     <string name="respond_later">Respond later</string>
-    <string name="title_activity_filter_list">FilterListActivity</string>
+    <string name="title_activity_filter_list">Filtered list</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Hello world!</string>
-    <string name="prikazi_neodgovorene">Prikazi neodgovorene SMS-ove</string>
-    <string name="prikazi_odgovorene">Prikazi odgovorene SMS-ove</string>
-    <string name="prikazi_sve">Prikazi sve SMS-ove</string>
+    <string name="prikazi_neodgovorene">Show unresponded SMS</string>
+    <string name="prikazi_odgovorene">Show responded SMS</string>
+    <string name="prikazi_sve">Show all SMS</string>
     
 
 </resources>

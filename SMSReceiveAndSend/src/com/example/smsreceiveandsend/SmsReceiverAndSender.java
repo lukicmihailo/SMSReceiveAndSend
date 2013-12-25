@@ -1,6 +1,8 @@
 package com.example.smsreceiveandsend;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -38,7 +40,8 @@ public class SmsReceiverAndSender extends BroadcastReceiver {
            
            if(messageReceived.contains("misa")){
         	   Intent newIntent = new Intent(context,NewSMSActivity.class);
-        	   newIntent.putExtra("date", date.toString());
+               SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US);
+        	   newIntent.putExtra("date", sdf.format(date));
         	   newIntent.putExtra("senderNumber", senderPhoneNumber);
         	   newIntent.putExtra("message", messageReceived);
         	   newIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -40,25 +40,26 @@ public final class R {
         public static final int ic_launcher=0x7f020003;
         public static final int list_item_selected=0x7f020004;
         public static final int list_item_shape=0x7f020005;
-        public static final int list_selector=0x7f020006;
+        public static final int remove=0x7f020006;
     }
     public static final class id {
-        public static final int action_prikazi_neodgovorene=0x7f09000d;
-        public static final int action_prikazi_odgovorene=0x7f09000e;
-        public static final int action_prikazi_sve=0x7f09000f;
-        public static final int action_settings=0x7f09000c;
-        public static final int btnDecline=0x7f09000a;
-        public static final int btnRespond=0x7f090009;
-        public static final int btnRespondLater=0x7f09000b;
+        public static final int action_prikazi_neodgovorene=0x7f09000e;
+        public static final int action_prikazi_odgovorene=0x7f09000f;
+        public static final int action_prikazi_sve=0x7f090010;
+        public static final int action_settings=0x7f09000d;
+        public static final int btnDecline=0x7f09000b;
+        public static final int btnRespond=0x7f09000a;
+        public static final int btnRespondLater=0x7f09000c;
         public static final int date=0x7f090002;
-        public static final int labelDate=0x7f090005;
-        public static final int labelMessage=0x7f090007;
-        public static final int labelSender=0x7f090003;
+        public static final int imageRemove=0x7f090003;
+        public static final int labelDate=0x7f090006;
+        public static final int labelMessage=0x7f090008;
+        public static final int labelSender=0x7f090004;
         public static final int listViewPregledSMS=0x7f090000;
         public static final int sender=0x7f090001;
-        public static final int txtDate=0x7f090006;
-        public static final int txtMessage=0x7f090008;
-        public static final int txtNumber=0x7f090004;
+        public static final int txtDate=0x7f090007;
+        public static final int txtMessage=0x7f090009;
+        public static final int txtNumber=0x7f090005;
     }
     public static final class layout {
         public static final int activity_filter_list=0x7f030000;
